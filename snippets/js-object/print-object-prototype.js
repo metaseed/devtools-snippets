@@ -1,4 +1,4 @@
-document.printPrototypeChain = object => {
+printPrototypeChain = object => {
   var proto = object.constructor.prototype;
   var result = '';
 
