@@ -1,6 +1,6 @@
 /// printPrototypeChain(window)
 /// "Window -> WindowProperties -> EventTarget -> Object"
-printPrototypeChain = object => {
+prototypeChain = object => {
   var proto = object.__proto__ || object.constructor.prototype;
   var result = '';
 
@@ -14,7 +14,7 @@ printPrototypeChain = object => {
 
 /// findOnChain($0,'nodeName')
 /// " -> HTMLAnchorElement -> HTMLElement -> Element -> Node(nodeName) -> EventTarget -> Object"
-findOnPrototypeChain = (object, property) => {
+prototypeChainFind = (object, property) => {
   var proto = object.__proto__ || object.constructor.prototype;
   var result = object.hasOwnProperty(property) ? `(${property})` : '';
 
